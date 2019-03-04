@@ -7,6 +7,7 @@ RUN buildDeps="sudo make gcc g++ libc-dev ruby-dev" \
  && apt-get install -y --no-install-recommends $buildDeps \
  && sudo gem install \
         fluent-plugin-kubernetes_metadata_filter \
+        fluent-plugin-gelf-hs \
  && sudo gem sources --clear-all \
  && SUDO_FORCE_REMOVE=yes \
     apt-get purge -y --auto-remove \
